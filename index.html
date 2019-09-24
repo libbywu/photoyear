@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>雞年年節布飾品攝影集 Libby</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+        <style>
+            body {
+                background-color: #000;
+                font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", "Segoe UI", "Roboto";
+            }
+            
+            .bg-cover {
+            background-size: cover;
+            background-position: center center; 
+            }
+
+            .mt-gutter-s {
+            margin-top: 10px; 
+            }
+
+            .card-line:hover {
+            border: 1px dashed white;
+            border-radius: 5px;
+            margin: 6px; }
+
+            @media (max-width: 576px) {
+            .mt-gutter {
+                margin-top: 10px; }
+            .mt-gutter-s {
+                margin-top: 20px; } }
+
+            /* lightbox */
+            .lightbox-target {
+                position: fixed;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                opacity: 0;
+                overflow: hidden;
+                -webkit-transition: width 2s;
+                -o-transition: width 2s;
+                transition: width 2s;
+            }
+            .lightbox-target .content {
+                width: 90%;
+                height: 90%;
+                background: #fff;
+                color: #333;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border: 3px solid #fff;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-transition: 1s ease-in-out;
+                -o-transition: 1s ease-in-out;
+                transition: 1s ease-in-out; 
+            }
+            .lightbox-target img {
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border: 5px solid #fff;
+                border-radius: 10px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                max-height: 0%;
+                max-width: 0%;
+                -webkit-transition: 1s ease-in-out;
+                -o-transition: 1s ease-in-out;
+                transition: 1s ease-in-out; 
+            }
+            .lightbox-target:target {
+                top: 0;
+                bottom: 0;
+                opacity: 1; 
+            }
+                .lightbox-target:target .content, .lightbox-target:target img {
+                max-height: 85%;
+                max-width: 85%; }
+                .lightbox-target:target .lightbox-close {
+                top: 5%;
+                right: 5%; 
+            }
+
+                .lightbox-close {
+                    width: 40px;
+                    height: 40px;
+                    background: #d4d4d4;
+                    color: #fff;
+                    position: absolute;
+                    top: 21%;
+                    right: 21%;
+                    border-radius: 50%;
+                }
+                .lightbox-close:after {
+                    width: 25px;
+                    height: 2px;
+                    content: "";
+                    display: block;
+                    background: #fff;
+                    position: absolute;
+                    top: 20px;
+                    left: 7px;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg); 
+                }
+                .lightbox-close:before {
+                    width: 25px;
+                    height: 2px;
+                    content: "";
+                    display: block;
+                    background: #fff;
+                    position: absolute;
+                    top: 20px;
+                    left: 7px;
+                    -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg); 
+                }
+
+                @media (max-width: 576px) {
+                .lightbox-close {
+                    top: 5%;
+                    right: 5%; }
+                .lightbox-target:target img {
+                    max-height: 90%;
+                    max-width: 90%; } 
+                }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#"><i class="fas fa-camera-retro fa-lg"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">相片牆
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="ml-auto">
+                <i class="fab fa-facebook-square"></i>
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+ <div class="container mt-5">
+     <div class="row text-center pb-2">
+         <div class="col text-white">
+            <p> 運用 Bootstrap 及 CSS3 做出自適應的 lightbox</p>
+         </div>
+     </div>
+     <div class="form-row">
+         <div class="col-lg-8">
+            <div class="form-row" style="height: 350px;">
+                <div class="col-sm-6">
+                    <div class="card bg-cover h-100" style="background-image: url(images/newyear-1.jpg)">
+                        <div class="card-line h-100">
+                            <div class="card-body  h-100 d-flex justify-content-center align-items-center">
+                                <a href="#newyear-1" class="btn btn-outline-light"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-cover h-100 mt-gutter" style="background-image: url(images/newyear-2.jpg)">
+                        <div class="card-line h-100">
+                            <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                                <a href="#newyear-2" class="btn btn-outline-light"><i class="fas fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                <div class="card bg-cover mt-gutter-s" style="background-image: url(images/newyear-3.jpg)">
+                    <div class="card-line h-100">
+                        <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                            <a href="#newyear-3" class="btn btn-outline-light"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+         </div>
+         <div class="col-lg-4">
+                <div class="card bg-cover h-100 mt-gutter" style="background-image: url(images/newyear-4.jpg)">
+                    <div class="card-line h-100">
+                        <div class="card-body  h-100 d-flex justify-content-center align-items-center">
+                            <a href="#newyear-4" class="btn btn-outline-light"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+         </div>
+     </div>
+
+     <div class="form-row" style="height: 400px;">
+         <div class="col-lg-4">
+                <div class="card bg-cover h-100 mt-gutter-s" style="background-image: url(images/newyear-5.jpg)">
+                    <div class="card-line h-100">
+                        <div class="card-body  h-100 d-flex justify-content-center align-items-center">
+                            <a href="#newyear-5" class="btn btn-outline-light"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+         </div>
+         <div class="col-lg-8">
+                <div class="card bg-cover h-100 mt-gutter-s" style="background-image: url(images/newyear-6.jpg)">
+                    <div class="card-line h-100">
+                        <div class="card-body  h-100 d-flex justify-content-center align-items-center">
+                            <a href="#newyear-6" class="btn btn-outline-light"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+         </div>
+     </div>
+ </div>
+    
+<!--lightbox-->
+
+    <div class="lightbox-target" id="newyear-1">
+        <img src="images/newyear-1.jpg" alt="">
+        <a class="lightbox-close" href="#"></a>
+    </div>
+
+    <div class="lightbox-target" id="newyear-2">
+        <img src="images/newyear-2.jpg" alt="">
+        <a class="lightbox-close" href="#"></a>
+    </div>
+
+    <div class="lightbox-target" id="newyear-3">
+        <img src="images/newyear-3.jpg" alt="">
+        <a class="lightbox-close" href="#"></a>
+    </div>
+
+    <div class="lightbox-target" id="newyear-4">
+        <img src="images/newyear-4.jpg" alt="">
+        <a class="lightbox-close" href="#"></a>
+    </div>
+
+    <div class="lightbox-target" id="newyear-5">
+        <img src="images/newyear-5.jpg" alt="">
+        <a class="lightbox-close" href="#"></a>
+    </div>
+
+    <div class="lightbox-target" id="newyear-6">
+        <img src="images/newyear-6.jpg" alt="">
+        <a class="lightbox-close" href="#"></a>
+    </div>
+
+<!--footer-->
+    <footer class=" my-5 text-white text-center"> 
+        <p>© 2018, Libby Wu.</p>
+
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>
